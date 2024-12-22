@@ -1,14 +1,12 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import "./globals.css";
+import { Navbar, Sidebar } from "@/components";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Noto_Sans({
+  variable: "--font-roboto",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  // display: "swap",
 });
 
 export const metadata = {
@@ -19,10 +17,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${roboto.variable} antialiased`}>
+        <div className="relative">
+          <div className="flex h-screen">
+            {/* <div className="bg-primary fixed z-20 flex h-[80px] w-full shadow-xl">
+              <Navbar />
+            </div> */}
+
+            <Sidebar />
+            <div className="w-3/4 flex-grow animate-slide_up overflow-y-auto bg-[#F8F8F8] p-4 pl-12 pt-7">
+              {children}
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   );
