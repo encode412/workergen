@@ -14,11 +14,11 @@ const LeadsPage = () => {
     setShowModal(value);
   };
   return (
-    <div className="flex flex-col gap-y-4">
+    <section className="flex flex-col gap-y-4">
       <TopBarSection />
       <InsightSection setSelected={handleSelected} setShowModal={handleModal} />
       <TableSection showModal={showModal} setShowSelected={setShowModal} setLead={setSelected} selected={selected} />
-    </div>
+    </section>
   );
 };
 

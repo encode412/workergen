@@ -53,7 +53,7 @@ const TableSection = ({
   };
 
   return (
-    <div className="relative">
+    <section className="relative">
       {showModal && (
         <div className="fixed left-[20%] top-[10%] z-[999] h-full overflow-auto">
           <SelectedLeadModal
@@ -141,7 +141,7 @@ const TableSection = ({
           </table>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

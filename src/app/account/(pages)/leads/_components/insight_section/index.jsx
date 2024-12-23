@@ -29,9 +29,9 @@ const InsightSection = ({ setSelected, setShowModal }) => {
   };
 
   return (
-    <div className="scale- rounded-[6px] bg-primary drop-shadow-md">
+    <section className="scale- rounded-[6px] bg-primary drop-shadow-md">
       <div className="flex flex-col gap-y-10 px-10 py-5">
-        <div className="flex w-full items-center justify-between gap-x-2">
+        <div className="flex w-full lg:items-center justify-between gap-x-2 lg:flex-row flex-col">
           <div className="flex w-3/4 items-center gap-x-2">
             <Image src={CoPilotLogo} alt="copilot" width={40} height={40} />
             <span className="text-xl font-semibold">
@@ -95,13 +95,13 @@ const InsightSection = ({ setSelected, setShowModal }) => {
           <ArrowUp01Icon className="mt-[1.2rem]" size={24} />
         </div>
 
-        <div className="flex w-full items-center gap-x-14">
+        <div className="flex lg:flex-row flex-col w-full lg:items-center gap-14">
           <div className="relative flex w-full flex-col gap-y-3">
             <span className="text-lg font-normal text-dark">
               Copilot has pinpointed 20 key leads that show strong purchase
               intent and are actively engaging. These leads need your focus.
             </span>
-            <div className="flex gap-x-3 overflow-x-auto">
+            <div className="flex gap-3 overflow-x-auto">
               {demoLeadsDetails
                 .slice(currentIndex, currentIndex + 2)
                 .map((lead) => (
@@ -144,7 +144,7 @@ const InsightSection = ({ setSelected, setShowModal }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

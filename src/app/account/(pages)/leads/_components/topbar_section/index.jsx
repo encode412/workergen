@@ -20,7 +20,7 @@ import React from "react";
 const TopBarSection = () => {
 
   return (
-    <div className="w-full bg-primary text-[15px] drop-shadow-md">
+    <header className="w-full bg-primary text-[15px] drop-shadow-md">
       <div className="flex w-full justify-between px-3 py-3">
         <div className="flex items-center gap-x-1">
           <span>My open leads</span>
@@ -89,7 +89,7 @@ const TopBarSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
