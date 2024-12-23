@@ -203,7 +203,7 @@ const Sidebar = ({}) => {
         />
       </div>
 
-      <div
+      <section
         className={`animate-slide_left z-50 h-full w-[15%] overflow-y-auto border-r-2 border-[#D0D5DD] bg-lightgray ${closeMenu && "hidden"}`}
       >
         <div className="flex w-full flex-col gap-y-6">
@@ -263,7 +263,7 @@ const Sidebar = ({}) => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
